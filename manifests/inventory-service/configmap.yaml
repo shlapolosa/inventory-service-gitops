@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: inventory-service-config
+  namespace: inventory-service
+data:
+  APP_ENV: "production"
+  SERVICE_NAME: "inventory-service"
+  DATABASE_URL: "postgresql://$DATABASE_USER:$DATABASE_PASSWORD@inventory-service-postgres-rw.inventory-service.svc.cluster.local:5432/inventory-service"
